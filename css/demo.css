@@ -1,0 +1,20 @@
+#header {
+    background-color: #0099ee;
+    color: white;
+}
+
+.header__title {
+    font-size: 21px;
+    font-weight: 200;
+}
+
+#hero,
+#section1,
+#section2,
+#section3 {
+    background-color: #ffffff;
+}
+
+@media screen and (max-width: 640px) {
+    #header img { margin: 0 auto;}
+}

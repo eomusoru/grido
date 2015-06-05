@@ -1,0 +1,342 @@
+/* Client-specific Styles */
+#outlook a {
+  padding: 0;
+}
+
+/* Force Outlook to provide a "view in browser" button. */
+body {
+  width: 100% !important;
+}
+
+.ReadMsgBody {
+  width: 100%;
+}
+
+.ExternalClass {
+  width: 100%;
+}
+
+/* Force Hotmail to display emails at full width */
+body {
+  -webkit-text-size-adjust: none;
+}
+
+/* Prevent Webkit platforms from changing default text sizes. */
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+  line-height: 100%;
+}
+
+/* Force Hotmail to display normal line spacing */
+body, table, td, p, a, li, blockquote {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* Prevent WebKit and Windows mobile changing default text sizes */
+table, td {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+
+/* Remove spacing between tables in Outlook 2007 and up */
+img {
+  display: block;
+  -ms-interpolation-mode: bicubic;
+  border: 0 !important;
+  outline: none !important;
+  text-decoration: none !important;
+}
+
+/* Allow smoother rendering of resized image in Internet Explorer */
+/* Reset Styles */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+  height: auto;
+  line-height: 100%;
+  outline: none;
+  text-decoration: none;
+  -ms-interpolation-mode: bicubic;
+}
+
+table td {
+  border-collapse: collapse;
+}
+
+body, #bodyTable, #bodyCell {
+  height: 100% !important;
+  margin: 0;
+  padding: 0;
+  width: 100% !important;
+}
+
+@media screen and (max-width: 640px) {
+  body, table, td, p, a, li, blockquote {
+    -webkit-text-size-adjust: none !important;
+  }
+
+  /* Prevent Webkit platforms from changing default text sizes */
+  body {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+
+  /* Prevent iOS Mail from adding padding to the body */
+}
+.img--fluid {
+  height: auto !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+@media only screen and (max-width: 640px) {
+  .img--fluid {
+    max-width: 300px !important;
+  }
+}
+@media only screen and (min-width: 720px) {
+  .img--fluid {
+    max-width: 660px !important;
+  }
+}
+#tplGrid {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: .5;
+  background: url(http://griddle.it/570-12-30?background=Gainsboro&color=DodgerBlue&num=false) repeat-y center top;
+}
+
+.grid-container {
+  width: 600px;
+}
+
+.grid__col--1 {
+  width: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.grid__col--2 {
+  width: 100px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.grid__col--3 {
+  width: 150px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.grid__col--4 {
+  width: 200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.grid__col--5 {
+  width: 250px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.grid__col--6 {
+  width: 300px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.grid__col--7 {
+  width: 350px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.grid__col--8 {
+  width: 400px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.grid__col--9 {
+  width: 450px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.grid__col--10 {
+  width: 500px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.grid__col--11 {
+  width: 550px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.grid__col--12 {
+  width: 600px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: 680px) {
+  #tplGrid {
+    background: url(http://griddle.it/630-12-30?background=Gainsboro&color=DodgerBlue&num=false) repeat-y center top;
+  }
+
+  [class="grid-container"] {
+    width: 660px !important;
+  }
+
+  [class="grid__col--1"] {
+    width: 55px !important;
+  }
+
+  [class="grid__col--2"] {
+    width: 110px !important;
+  }
+
+  [class="grid__col--3"] {
+    width: 165px !important;
+  }
+
+  [class="grid__col--4"] {
+    width: 220px !important;
+  }
+
+  [class="grid__col--5"] {
+    width: 275px !important;
+  }
+
+  [class="grid__col--6"] {
+    width: 330px !important;
+  }
+
+  [class="grid__col--7"] {
+    width: 385px !important;
+  }
+
+  [class="grid__col--8"] {
+    width: 440px !important;
+  }
+
+  [class="grid__col--9"] {
+    width: 495px !important;
+  }
+
+  [class="grid__col--10"] {
+    width: 550px !important;
+  }
+
+  [class="grid__col--11"] {
+    width: 605px !important;
+  }
+
+  [class="grid__col--12"] {
+    width: 660px !important;
+  }
+}
+@media screen and (max-width: 620px) {
+  #tplGrid {
+    background: url(http://griddle.it/270-1-30?background=Gainsboro&color=DodgerBlue&num=false) repeat-y center top;
+  }
+
+  [class="grid-container"] {
+    max-width: 300px !important;
+    width: 100% !important;
+  }
+
+  [class="grid__col--1"] {
+    width: 300px !important;
+    max-width: 300px !important;
+  }
+
+  [class="grid__col--2"] {
+    width: 300px !important;
+    max-width: 300px !important;
+  }
+
+  [class="grid__col--3"] {
+    width: 300px !important;
+    max-width: 300px !important;
+  }
+
+  [class="grid__col--4"] {
+    width: 300px !important;
+    max-width: 300px !important;
+  }
+
+  [class="grid__col--5"] {
+    width: 300px !important;
+    max-width: 300px !important;
+  }
+
+  [class="grid__col--6"] {
+    width: 300px !important;
+    max-width: 300px !important;
+  }
+
+  [class="grid__col--7"] {
+    width: 300px !important;
+    max-width: 300px !important;
+  }
+
+  [class="grid__col--8"] {
+    width: 300px !important;
+    max-width: 300px !important;
+  }
+
+  [class="grid__col--9"] {
+    width: 300px !important;
+    max-width: 300px !important;
+  }
+
+  [class="grid__col--10"] {
+    width: 300px !important;
+    max-width: 300px !important;
+  }
+
+  [class="grid__col--11"] {
+    width: 300px !important;
+    max-width: 300px !important;
+  }
+
+  [class="grid__col--12"] {
+    width: 300px !important;
+    max-width: 300px !important;
+  }
+}
+#bodyCell {
+  padding: 20px 0 40px;
+}
+
+body, #bodyTable {
+  background-color: #f2f2f2;
+  font-family: "Helvetica Neue",Helvetica,arial,sans-serif;
+}
+
+@media screen and (max-width: 640px) {
+  body, table, td, p, a, li, blockquote {
+    -webkit-text-size-adjust: none !important;
+  }
+
+  /* Prevent Webkit platforms from changing default text sizes */
+  body {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+
+  /* Prevent iOS Mail from adding padding to the body */
+}
+
+/*# sourceMappingURL=styles.css.map */

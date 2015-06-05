@@ -1,0 +1,28 @@
+/* Client-specific Styles */
+#outlook a{padding:0;} /* Force Outlook to provide a "view in browser" button. */
+body{width:100% !important;} .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} /* Force Hotmail to display emails at full width */
+body{-webkit-text-size-adjust:none;} /* Prevent Webkit platforms from changing default text sizes. */
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing */
+body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;} /* Prevent WebKit and Windows mobile changing default text sizes */
+table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} /* Remove spacing between tables in Outlook 2007 and up */
+img{display:block;-ms-interpolation-mode:bicubic; border:0 !important; outline:none !important; text-decoration:none !important;} /* Allow smoother rendering of resized image in Internet Explorer */
+
+
+/* Reset Styles */
+body{margin:0; padding:0;}
+img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; }
+table td{border-collapse:collapse;}
+body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;}
+
+
+@media screen and (max-width: 640px) {
+    body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:none !important;} /* Prevent Webkit platforms from changing default text sizes */
+    body{width:100% !important; min-width:100% !important;} /* Prevent iOS Mail from adding padding to the body */
+}
+
+@media screen and (min-width: 720px) {
+    // We have to give each images in our email a width attribute corresponding
+    // to the regular width layout, so when we expand the width of our email,
+    // images are downsized by this attribute. We set a width auto here for
+    // the wider layout :
+}

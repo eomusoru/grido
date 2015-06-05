@@ -1,0 +1,46 @@
+// --
+// IMPORTS
+// 
+@import "reset";   // Client resets
+@import "grido";   // Grid system
+@import "helpers"; // Useful classes
+
+
+// -- 
+// BUILD A GRID
+// Here with the default parameters (see _grid.scss)
+@include make-grid(); 
+
+// --
+// YOUR EMAIL STYLES
+// 
+#bodyCell{ padding: 20px 0 40px; }
+
+body, #bodyTable{
+    background-color: #f2f2f2;
+    font-family: "Helvetica Neue",Helvetica,arial,sans-serif;
+}
+
+
+// --
+// YOUR RESPONSIVE STYLES
+//
+
+// MOBILES
+// if you modify the max-width, be sure to use the same value in _reset.scss' media-query.
+@media screen and (max-width: 640px) {
+    body, table, td, p, a, li, blockquote{-webkit-text-size-adjust:none !important;} /* Prevent Webkit platforms from changing default text sizes */
+    body{width:100% !important; min-width:100% !important;} /* Prevent iOS Mail from adding padding to the body */
+
+    // N.B.: Yahoo mail renders well the media queries now, so there's no use using the dirty attributes selectors as we did before.
+    // Thus, it does not support "max-device-width" "min-device-width" and cumulated media queries (... and ...).
+
+    // Now... Your styles:
+}
+
+// LARGE SCREENS
+// You could want to expand your email's width for larger screens
+@media screen and (min-width: 720px) {
+    // Your styles:
+}
+

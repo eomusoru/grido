@@ -1,0 +1,85 @@
+// --
+// GRID SYSTEM
+// ===========================================
+//
+// @author: @bnthor
+// @compatibility: @TODO
+//
+// SIZE ======================================
+// @regular = set $container-regular
+// @large   = set $container-large
+// @mobile  = set $container-small
+//
+// SPACING ===================================
+// @columns = default : 12
+// @gutters = default : 30px
+// ---
+// N.B.: The columns have left AND right gutters
+// resulting, with the defaults, in a 15px margin around the grid
+// (See ressources)
+//
+
+
+// GRID GENERATION MIXIN
+
+@mixin make-grid($column-count:12, $column-margin:30, $container-regular:600, $container-large:660, $container-small:300) {
+	
+	// Grid overlay
+
+	#tplGrid {
+		position: fixed;
+		top: 0; bottom: 0;
+		right: 0; left: 0;
+		opacity: .5;
+		background: url(http://griddle.it/#{$container-regular - $column-margin}-#{$column-count}-#{$column-margin}?background=Gainsboro&color=DodgerBlue&num=false) repeat-y center top;
+	}
+
+	// Regular grid
+
+	.grid-container { width: $container-regular + px; }
+
+	$column-width: $container-regular / $column-count - $column-margin;
+
+	@for $i from 1 through ($column-count) {
+		.grid__col--#{$i} {
+			width: ($column-width * $i) + ($column-margin * $i) + px;
+			padding-left:  ($column-margin / 2) + px;
+			padding-right: ($column-margin / 2) + px;
+		}
+	}
+
+	// Media-queries
+
+	@media screen and (min-width: $container-large + 20 + px) {
+
+		#tplGrid {
+			background: url(http://griddle.it/#{$container-large - $column-margin}-#{$column-count}-#{$column-margin}?background=Gainsboro&color=DodgerBlue&num=false) repeat-y center top;
+		}
+
+		[class="grid-container"] { width: $container-large + px !important; }
+
+		$column-width: ($container-large / $column-count) - $column-margin;
+
+		@for $i from 1 through ($column-count) {
+			[class="grid__col--#{$i}"] {
+				width: ($column-width * $i) + ($column-margin * $i) + px !important;
+			}
+		}
+	}
+
+	@media screen and (max-width: $container-regular + 20 + px) {
+
+		#tplGrid {
+			background: url(http://griddle.it/#{$container-small - $column-margin}-1-#{$column-margin}?background=Gainsboro&color=DodgerBlue&num=false) repeat-y center top;
+		}
+
+		[class="grid-container"] { max-width: $container-small + px !important; width: 100% !important; }
+
+		@for $i from 1 through ($column-count) {
+			[class="grid__col--#{$i}"] {
+				width: $container-small + px !important;
+				max-width: $container-small + px !important;
+			}
+		}
+	}
+}

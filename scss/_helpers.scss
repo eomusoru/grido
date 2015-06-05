@@ -1,0 +1,13 @@
+.img--fluid {
+    height: auto !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+@media only screen and (max-width: 640px){
+    .img--fluid { max-width: 300px !important; }
+}
+
+@media only screen and (min-width: 720px){
+    .img--fluid { max-width: 660px !important; }
+}
