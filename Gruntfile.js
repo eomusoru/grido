@@ -8,9 +8,13 @@ module.exports = function(grunt) {
 
         premailer: {
             main: {
-                files: {
-                    './index.inline.html': ['./index.html'],
-                }
+                files: [{
+                    expand: true,
+                    cwd: './',
+                    src: ['*.html'],
+                    dest: './',
+                    ext: '.inline.html'
+                }]
             }
         },
 
